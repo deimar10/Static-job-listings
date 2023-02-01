@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { JobInterface } from './Interface/interface';
-import JobOffers from './components/jobOffers';
+import Home from './pages/Home';
 import Data from './data.json';
 
 function App() {
@@ -11,15 +11,9 @@ function App() {
     setJobData(Data as JobInterface[])
   }, []);
 
-  console.log(jobData)
-
   return (
     <div className="App">
-      <div className='image-container'>
-      </div>
-      <div className='job-offers-container'>
-        <JobOffers />
-      </div>
+      <Home jobData={jobData} />
     </div>
   );
 }

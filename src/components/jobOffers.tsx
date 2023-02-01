@@ -1,9 +1,10 @@
 import React from 'react';
+import './jobOffers.css';
 
-function jobOffers () {
+function jobOffers ({jobData}: any) {
     return (
         <div>
-            Tere
+            
         </div>
     )
 }
