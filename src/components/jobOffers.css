@@ -1,0 +1,100 @@
+.job-main-container {
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 2.5rem;
+    background-color: white;
+    border-left: 6px solid hsl(180, 29%, 50%);
+    border-radius: 0.35rem;
+    box-shadow: 10px 10px 24px -4px hsl(180, 17%, 60%);
+}
+
+.job-main-container-left {
+    display: flex;
+    width: 70%;
+}
+
+.job-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-image-container img{
+    height: 85%;
+}
+
+.job-main-container-right {
+    display: flex;
+    justify-content: center;
+}
+
+.job-details-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1.75rem;
+}
+
+.heading-section {
+    font-size: 0.85rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+}
+
+.job-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+.job-info-container h3{
+    color: hsl(180, 29%, 50%);
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.job-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    color: hsl(180, 8%, 52%);
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.job-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.job-filter-container button{
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    border: 0px;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    padding: 0.35rem;
+}
+
+#label-new {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+#label-featured {
+    background-color: hsl(180, 14%, 20%);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
