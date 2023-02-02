@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css';
 import JobOffers from '../components/jobOffers';
-import Illustration from '../images/bg-header-desktop.svg';
+import Illustration from './bg-header-desktop.svg';
 
 function Home ({jobData}: any) {
     return (
