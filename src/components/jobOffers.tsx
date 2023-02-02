@@ -10,10 +10,9 @@ function JobOffers ({jobData}: any) {
     const handleFilter = () => {
         setFilterbar(true);
     }
-
     return (
         <div>
-            <Filterbar />
+            {filterbar ? <Filterbar /> : null }
             {jobData && jobData.map((offer: JobInterface) => {
                 return (
                     <div className='job-main-container' key={offer.id} style={{
@@ -41,11 +40,22 @@ function JobOffers ({jobData}: any) {
                     </div>
                     <div className='job-main-container-right'>
                     <div className='job-filter-container'>
-                        <button onClick={handleFilter}>Frontend</button>
-                        <button onClick={handleFilter}>Senior</button>
-                        <button onClick={handleFilter}>HTML</button>
-                        <button onClick={handleFilter}>CSS</button>
-                        <button onClick={handleFilter}>JavScript</button>
+                    <button onClick={handleFilter}>{offer.role}</button>
+                    <button onClick={handleFilter}>{offer.level}</button>
+                        {offer.languages.map((offerLanguages: any) => {
+                            return (
+                                <div>
+                                    <button onClick={handleFilter}>{offerLanguages}</button>
+                                </div>
+                            )
+                        })}
+                        {offer.tools.map((offerTools: any) => {
+                        return (
+                            <div>
+                                <button onClick={handleFilter}>{offerTools}</button>
+                            </div>
+                            );
+                        })}
                     </div>
                     </div>
                     </div>
