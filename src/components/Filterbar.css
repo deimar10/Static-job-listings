@@ -1,0 +1,64 @@
+.filterbar {
+    display: flex;
+    background-color: white;
+    border-radius: 0.35rem;
+    position: absolute;
+    top: 7.5rem;
+    left: 12.75%;
+    width: 72.5%;
+    padding: 1.25rem;
+}
+
+.filterbar-left {
+    display: flex;
+    gap: 1rem;
+    padding-left: 2.5rem;
+    width: 70%;
+}
+
+.filterbar-left button {
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    border: 0px;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    padding: 0.35rem;
+}
+
+.filterbar-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    padding-right: 2.5rem;
+}
+
+#remove-filter {
+    background-color: hsl(180, 31%, 95%);
+    border: 0px;
+    border-radius: 0.35rem;
+    color: hsl(180, 29%, 50%);
+    padding-left: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.filterbar-left button {
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 0rem 0.35rem 0.35rem 0rem;
+    color: hsl(0, 0%, 100%);
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+}
+
+.filterbar-left button:hover {
+    background-color: hsl(180, 14%, 20%);
+    cursor: pointer;
+}
+
+#clear {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px;
+    color: hsl(180, 29%, 50%);
+    font-weight: bold;
+}
