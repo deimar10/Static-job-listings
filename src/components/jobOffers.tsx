@@ -4,13 +4,13 @@ import { JobInterface } from '../Interface/interface';
 
 function JobOffers ({jobData}: any) {
 
-    const [selected, setSelected] = useState(false);
-
     return (
         <div>
             {jobData && jobData.map((offer: JobInterface) => {
                 return (
-                    <div className='job-main-container' key={offer.id}>
+                    <div className='job-main-container' key={offer.id} style={{
+                        borderLeft: offer.featured ? '6px solid hsl(180, 29%, 50%)' : '0px'
+                    }}>
                     <div className='job-main-container-left'>
                     <div className='job-image-container'>
                         <img src={offer.logo} />
@@ -18,8 +18,8 @@ function JobOffers ({jobData}: any) {
                     <div className='job-details-container'>
                     <div className='job-info-container'>
                         <h3>{offer.company}</h3>
-                        <label id='label-new'>NEW!</label>
-                        <label id='label-featured'>FEATURED</label>
+                       {offer.new ? <label id='label-new'>NEW!</label> : null}
+                       {offer.featured ?  <label id='label-featured'>FEATURED</label> : null}
                     </div>
                     <div className='heading-section'>
                         <h2>{offer.position}</h2>

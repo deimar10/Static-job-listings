@@ -5,7 +5,6 @@
     margin-top: 3rem;
     padding: 2.5rem;
     background-color: white;
-    border-left: 6px solid hsl(180, 29%, 50%);
     border-radius: 0.35rem;
     box-shadow: 10px 10px 24px -4px hsl(180, 17%, 60%);
 }
@@ -45,12 +44,12 @@
 
 .job-info-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 30%;
+    gap: 1rem;
 }
 
-.job-info-container h3{
+.job-info-container h3 {
     color: hsl(180, 29%, 50%);
     font-size: 0.85rem;
     font-weight: bold;
