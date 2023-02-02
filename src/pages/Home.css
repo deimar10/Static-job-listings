@@ -8,3 +8,8 @@ body {
     height: 10rem;
     background-color: hsl(180, 29%, 50%);
 }
+
+.job-offers-container {
+    height: 100%;
+    padding-bottom: 5rem;
+}
