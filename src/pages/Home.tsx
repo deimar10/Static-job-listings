@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import JobOffers from '../components/jobOffers';
+import JobOffers from '../components/JobOffers';
 import Illustration from './bg-header-desktop.svg';
 
 function Home ({jobData}: any) {

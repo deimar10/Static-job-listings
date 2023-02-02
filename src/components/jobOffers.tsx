@@ -1,10 +1,10 @@
-import React from 'react';
-import './jobOffers.css';
+import React, { useState } from 'react';
+import './JobOffers.css';
 import { JobInterface } from '../Interface/interface';
 
-function jobOffers ({jobData}: any) {
+function JobOffers ({jobData}: any) {
 
-    console.log(jobData)
+    const [selected, setSelected] = useState(false);
 
     return (
         <div>
@@ -47,4 +47,4 @@ function jobOffers ({jobData}: any) {
     )
 }
 
-export default jobOffers;
+export default JobOffers;
