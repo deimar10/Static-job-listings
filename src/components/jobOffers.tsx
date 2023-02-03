@@ -5,15 +5,72 @@ import Filterbar from './Filterbar';
 
 function JobOffers ({jobData}: any) {
 
-    const [filterbar, setFilterbar] = useState(false);
+    const [filterbar, setFilterbar] = useState<boolean>(false);
+    const [filterInfo, setFilterInfo] = useState<any>({
+        role: '',
+        level: '',
+        language: '',
+        tools: ''
+    });
 
-    const handleFilter = () => {
+    const handleFilter = (offer: JobInterface) => {
+        setFilterInfo({...filterInfo, role: offer.role});
+        setFilterInfo({...filterInfo, level: offer.level})
+        
         setFilterbar(true);
     }
+
+    const handleLanguages = (offerLanguages: string) => {
+        setFilterInfo({...filterInfo, language: offerLanguages})
+        
+        setFilterbar(true);
+    }
+
+    const handleTools = (offerTools: string) => {
+        setFilterInfo({...filterInfo, tools: offerTools})
+
+        setFilterbar(true);
+    }
+
+    const handleFilterOffers = () => {
+        let filteredOffers = jobData;
+
+        if (filterInfo.role !== '') {
+            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.role === filterInfo.role);
+        }
+
+        if (filterInfo.level !== '') {
+            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.level === filterInfo.level);
+        }
+
+        if (filterInfo.language !== '') {
+            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.languages.includes(filterInfo.language));
+        }
+
+        if (filterInfo.tools !== '') {
+            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.tools.includes(filterInfo.tools));
+        }
+      
+        return filteredOffers;
+      };
+      
+      const handleProcessedOffers = () => {
+        let processedOffers = handleFilterOffers();
+      
+        return processedOffers;
+      };
+      
+      const processed = handleProcessedOffers();
     return (
         <div>
-            {filterbar ? <Filterbar /> : null }
-            {jobData && jobData.map((offer: JobInterface) => {
+            {filterbar ? 
+            <Filterbar 
+            filterInfo={filterInfo} 
+            setFilterInfo={setFilterInfo} 
+            setFilterbar={setFilterbar} 
+            /> : null 
+            }
+            {processed && processed.map((offer: JobInterface) => {
                 return (
                     <div className='job-main-container' key={offer.id} style={{
                         borderLeft: offer.featured ? '6px solid hsl(180, 29%, 50%)' : '0px'
@@ -40,19 +97,19 @@ function JobOffers ({jobData}: any) {
                     </div>
                     <div className='job-main-container-right'>
                     <div className='job-filter-container'>
-                    <button onClick={handleFilter}>{offer.role}</button>
-                    <button onClick={handleFilter}>{offer.level}</button>
-                        {offer.languages.map((offerLanguages: any) => {
+                    <button onClick={e => handleFilter(offer)}>{offer.role}</button>
+                    <button onClick={e => handleFilter(offer)}>{offer.level}</button>
+                        {offer.languages.map((offerLanguages: string) => {
                             return (
                                 <div>
-                                    <button onClick={handleFilter}>{offerLanguages}</button>
+                                    <button onClick={e => handleLanguages(offerLanguages)}>{offerLanguages}</button>
                                 </div>
                             )
                         })}
-                        {offer.tools.map((offerTools: any) => {
+                        {offer.tools.map((offerTools: string) => {
                         return (
                             <div>
-                                <button onClick={handleFilter}>{offerTools}</button>
+                                <button onClick={e => handleTools(offerTools)}>{offerTools}</button>
                             </div>
                             );
                         })}
