@@ -22,6 +22,7 @@
   * Filter job listings based on the categories selected
 ## Screenshots
 <img width="1436" alt="Screenshot 2023-02-07 at 14 03 53" src="https://user-images.githubusercontent.com/89903372/217250041-4715092b-de83-4d1f-bce8-0ac7939e97c8.png">
-<img width="1436" alt="Screenshot 2023-02-07 at 14 04 10" src="https://user-images.githubusercontent.com/89903372/217250049-7eba0850-e0b6-4d7f-acf8-9379cd37aef6.png">
-<img width="1436" alt="Screenshot 2023-02-07 at 14 04 59" src="https://user-images.githubusercontent.com/89903372/217250063-465e06c6-1015-4b38-a4c0-58a6b982c8b4.png">
+<img width="1436" alt="Screenshot 2023-02-07 at 14 54 32" src="https://user-images.githubusercontent.com/89903372/217250628-5259569b-2584-4117-a5e4-4d47a4d939fb.png">
+<img width="1436" alt="Screenshot 2023-02-07 at 14 54 50" src="https://user-images.githubusercontent.com/89903372/217250660-6fff401a-ac8e-4cea-a4ef-09bd21a19c69.png">
+
     
