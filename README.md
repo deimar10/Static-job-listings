@@ -4,7 +4,7 @@
     * <strong>Stack</strong>
     * <strong>App. Functionalities
     * <strong>Screenshots</strong>
-    ## Project Management
+## Project Management
 <div style="display: flex; justify-content: start;">
   <img src="https://img.shields.io/badge/toggl-white?style=for-the-badge&logo=toggl&logoColor=purple" alt="Toggl Badge"/>
   <img style="margin-left: 0.5rem;" src="https://img.shields.io/badge/figma-white?style=for-the-badge&logo=figma&logoColor=red" alt="Figma Badge"/>
@@ -16,7 +16,7 @@
         <img style="margin-left: 0.5rem;" src="https://img.shields.io/badge/TypeScript-white?style=for-the-badge&logo=typescript&logoColor=blue" alt="Ts Badge"/>
     </div>
     
- ## App. Functionalities
+## App. Functionalities
 * User
   * See hover states for all interactive elements on the page
   * Filter job listings based on the categories selected
