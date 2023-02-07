@@ -90,8 +90,8 @@
 #label-new {
     background-color: hsl(180, 29%, 50%);
     color: white;
-    border-radius: 1rem;
-    padding: 0.35rem;
+    border-radius: 0.85rem;
+    padding: 0.45rem;
     font-size: 0.75rem;
     font-weight: bold;
 }
@@ -99,8 +99,8 @@
 #label-featured {
     background-color: hsl(180, 14%, 20%);
     color: white;
-    border-radius: 1rem;
-    padding: 0.35rem;
+    border-radius: 0.85rem;
+    padding: 0.45rem;
     font-size: 0.75rem;
     font-weight: bold;
 }
