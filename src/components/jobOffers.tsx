@@ -3,31 +3,36 @@ import './JobOffers.css';
 import { JobInterface } from '../Interface/interface';
 import Filterbar from './Filterbar';
 
-function JobOffers ({jobData}: any) {
+function JobOffers({ jobData }: any) {
+    interface FilterInfo {
+        role: string,
+        level: string,
+        language: string[],
+        tools: string[]
+    };
 
     const [filterbar, setFilterbar] = useState<boolean>(false);
-    const [filterInfo, setFilterInfo] = useState<any>({
+    const [filterInfo, setFilterInfo] = useState<FilterInfo>({
         role: '',
         level: '',
-        language: '',
-        tools: ''
+        language: [],
+        tools: []
     });
 
     const handleFilter = (offer: JobInterface) => {
-        setFilterInfo({...filterInfo, role: offer.role});
-        setFilterInfo({...filterInfo, level: offer.level})
-        
+        setFilterInfo({ ...filterInfo, role: offer.role, level: offer.level});
+
         setFilterbar(true);
     }
 
     const handleLanguages = (offerLanguages: string) => {
-        setFilterInfo({...filterInfo, language: offerLanguages})
-        
+        setFilterInfo({ ...filterInfo, language: [...filterInfo.language, offerLanguages]});
+
         setFilterbar(true);
     }
 
     const handleTools = (offerTools: string) => {
-        setFilterInfo({...filterInfo, tools: offerTools})
+        setFilterInfo({ ...filterInfo, tools: [...filterInfo.tools, offerTools]});
 
         setFilterbar(true);
     }
@@ -43,16 +48,16 @@ function JobOffers ({jobData}: any) {
             filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.level === filterInfo.level);
         }
 
-        if (filterInfo.language !== '') {
-            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.languages.includes(filterInfo.language));
+        if (filterInfo.language.length !== 0) {
+            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.languages.some((lang) => filterInfo.language.includes(lang)));
         }
-
-        if (filterInfo.tools !== '') {
-            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.tools.includes(filterInfo.tools));
+          
+        if (filterInfo.tools.length !== 0) {
+            filteredOffers = filteredOffers.filter((offer: JobInterface) => offer.tools.some((tool) => filterInfo.tools.includes(tool)));
         }
-      
+          
         return filteredOffers;
-      };
+    };    
       
       const handleProcessedOffers = () => {
         let processedOffers = handleFilterOffers();
