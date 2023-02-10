@@ -20,6 +20,8 @@
 * User
   * See hover states for all interactive elements on the page
   * Filter job listings based on the categories selected
+  * Delete filters individually
+  * Delete all filters at the same time
 ## Screenshots
 <img width="1436" alt="Screenshot 2023-02-07 at 14 03 53" src="https://user-images.githubusercontent.com/89903372/217250041-4715092b-de83-4d1f-bce8-0ac7939e97c8.png">
 <img width="1436" alt="Screenshot 2023-02-07 at 14 54 32" src="https://user-images.githubusercontent.com/89903372/217250628-5259569b-2584-4117-a5e4-4d47a4d939fb.png">
